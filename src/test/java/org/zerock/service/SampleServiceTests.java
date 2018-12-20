@@ -23,12 +23,12 @@ public class SampleServiceTests {
 		log.info(service.getClass().getName());
 	}
 	@Test
-	public void testadd() {
-		try {
-			log.info(service.doAdd("123", "456"));
-		} catch (Exception e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-		}
+	public void testadd() throws Exception {
+		log.info(service.doAdd("123", "456"));
+		
+	}
+	@Test
+	public void testAddError() throws Exception{
+		log.info(service.doAdd("123", "adc"));
 	}
 }
